@@ -1,4 +1,4 @@
-/* dark purple: 	R: 48 G: 19 B: 67 */
+/* dark purple: 	rgb(48,19,67) */
 /* light pink: R: 238 G: 235 B: 244 */
 /* light purple:  	R: 211 G: 206 B: 229 */
 
@@ -14,6 +14,17 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 body {
   font-family: 'Nunito', sans-serif;
   letter-spacing: 0.1rem;
+  color: rgb(48,19,67);
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(48,19,67);
 }
 
 .posts ul {
@@ -23,18 +34,27 @@ body {
   padding: 0 40px;
 }
 
-.blogpost {
+/* .blogpost {
   display: none;
-}
+} */
 
 .blogpost img {
   width: 100%;
   object-fit: cover;
 }
 
-.posts ul > .blogpost:nth-child(1),
+/* .posts ul > .blogpost:nth-child(1),
 .posts ul > .blogpost:nth-child(2),
 .posts ul > .blogpost:nth-child(3)  {
+  background-color: rgb(220, 172, 250); 
+  flex-basis: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+
+  margin:10px;
+} */
+
+.blogpost  {
   background-color: rgb(220, 172, 250); 
   flex-basis: calc(33.33% - 20px);
   display: flex;
@@ -45,9 +65,32 @@ body {
 
 .copy {
   padding: 20px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* min-height:388.833px; */
+  
 }
 
+.copy h2 {
+  margin: 0;
+}
+
+.copy p:nth-child(3) {
+  margin-top: 0;
+}
+
+
+/* .copy * {
+  flex-grow: 0;
+} */
+
+.copy h3 {
+  /* flex-grow: 1; */
+  /* text-align: bottom; */
+  margin-top: 0;
+}
 
 
 /* .blogpost:nth-child(2) {
