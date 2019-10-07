@@ -1,6 +1,6 @@
 /* dark purple: 	rgb(48,19,67) */
-/* light pink: R: 238 G: 235 B: 244 */
-/* light purple:  	R: 211 G: 206 B: 229 */
+/* light pink: rgb(238,235,244) */
+/* light purple: rgb(211,206,229) */
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 
@@ -15,11 +15,21 @@ body {
   font-family: 'Nunito', sans-serif;
   letter-spacing: 0.1rem;
   color: rgb(48,19,67);
+  max-width: 1280px;
+  width: 100%;
 }
+
+
 
 h3 {
   text-transform: uppercase;
   font-size: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: rgb(211,206,229);
+  padding: 0 20px;
 }
 
 a {
@@ -27,11 +37,68 @@ a {
   color: rgb(48,19,67);
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+}
+
+
+header h1 {
+  font-size: 4rem;
+  width: 100px;
+  position: absolute;
+  bottom : 20px;
+  left: 10%;
+  color: white;
+
+}
+
+.page-copy {
+  column-count: 2;
+  column-gap: 30px;
+  padding: 70px 10%;
+}
+
+
+
+.page-copy h2 {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.page-copy p {
+  margin: 0;
+  padding: 16px 0;
+}
+
+
+
+.posts {
+  background-color: rgb(238,235,244);
+  padding: 60px 10%;
+}
+
+.posts li {
+  margin: 0;
+}
+
+
+
 .posts ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0;
 }
 
 /* .blogpost {
@@ -40,6 +107,7 @@ a {
 
 .blogpost img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -55,7 +123,7 @@ a {
 } */
 
 .blogpost  {
-  background-color: rgb(220, 172, 250); 
+  background-color:rgb(211,206,229); 
   flex-basis: calc(33.33% - 20px);
   display: flex;
   flex-direction: column;
@@ -63,7 +131,7 @@ a {
   margin:10px;
 }
 
-.copy {
+.blogpost .copy {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -73,7 +141,7 @@ a {
   
 }
 
-.copy h2 {
+.blogpost .copy h2 {
   margin: 0;
 }
 
@@ -90,6 +158,24 @@ a {
   /* flex-grow: 1; */
   /* text-align: bottom; */
   margin-top: 0;
+}
+
+footer {
+  background-color: rgb(48,19,67);
+  padding: 20px 0;
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer a {
+  background-color: rgb(211,206,229);
+  padding: 15px;
+  border-radius: 50%;
+  transform: scaleX(0.9);
 }
 
 

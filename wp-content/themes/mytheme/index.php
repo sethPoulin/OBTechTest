@@ -10,18 +10,29 @@
 </head>
 <body <?php body_class(); ?> >
   <header>
-  </header>
-  <section class="page-copy">
     <?php $custom_query = new WP_Query('post_type=page&posts_per_page=1'); // show pages only
       while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-
-          <div class="copy">
-            <h2><?php the_title(); ?></h2>
-            <?php the_content(); ?>
-          </div>
+        <div class="wrapper">
+          <h1><?php bloginfo ('name'); ?></h1>
+        </div>
+        <?php the_post_thumbnail('full') ?>
 
       <?php endwhile; ?>
-      <?php wp_reset_postdata(); // reset the query ?>
+    <?php wp_reset_postdata(); // reset the query ?>
+  </header>
+  <section class="page-copy">
+    <!-- <div class="wrapper"> -->
+      <?php $custom_query = new WP_Query('post_type=page&posts_per_page=1'); // show pages only
+        while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+  
+            <div class="copy">
+              <h2><?php the_title(); ?></h2>
+              <?php the_content(); ?>
+            </div>
+  
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); // reset the query ?>
+    <!-- </div> -->
 
   </section>
   <section class="posts">
@@ -81,6 +92,13 @@
     </ul>
   </section>
   <?php wp_footer(); ?>
+  <footer>
+    <div class="wrapper">
+      <?php $blog_info = get_bloginfo('description'); ?>
+      <h4><?php echo $blog_info; ?></h4>
+      <?php the_custom_logo(); ?>
+    </div>
+  </footer>
 </body>
 </html>
 
