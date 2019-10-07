@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Mytheme functions and definitions
+ */
+
 //Function to use external stylesheet.  get_stylesheet_uri() looks for and uses style.css by default.
 function enqueue_doggostheme_styles(){
   //we are naming the style doggostheme-style
@@ -20,7 +24,5 @@ function add_google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 add_filter( 'http_request_host_is_external', '__return_true' );
-
-
 
 ?>
